@@ -1,1 +1,47 @@
-SpatialAudioTracker: Automated Stereo Positioning & Source TrackingSpatialAudioTracker is an AI-powered tool designed to decouple audio from video files, analyze the spatial movement of sound sources, and dynamically pan the audio layers to match their visual positions in the stereo field.🚀 Key FeaturesAudio-Visual Source Tracking: Uses computer vision to identify and track the coordinates of sound-emitting objects within the video frame.Stereo Layer Separation: Isolates specific audio components and converts them into independent layers for granular control.Dynamic Panning: Automatically adjusts the L/R balance based on the object's position relative to the center of the frame.Binaural Simulation: Positions sound sources accurately for an immersive headphone listening experience.🛠 How It WorksDecomposition: The tool extracts the audio stream and splits it into distinct stems (vocals, instruments, or specific noise profiles).Visual Analysis: The tracking algorithm maps the $X$ and $Y$ coordinates of the identified source throughout the video duration.Spatial Mapping: The software maps the $X$-coordinate to the stereo panorama (e.g., an object on the far left of the screen is panned 100% to the Left channel).Re-encoding: The processed audio is merged back with the video, resulting in a perfectly synced spatial audio experience.
+# SpatialAudioTracker 🎧
+
+**SpatialAudioTracker** is an automated tool designed to extract audio from video, identify sound-emitting sources via computer vision, and dynamically re-position those sources in the stereo field based on their visual movement.
+
+
+
+## 📖 Overview
+
+This project bridges the gap between visual movement and static audio. By tracking objects in a video frame, the system calculates the appropriate panning ($L/R$ balance) and depth, ensuring that what you see on the left of the screen is heard in the left ear of your headphones.
+
+### Key Features
+* **Source Separation:** Isolates audio layers from complex video files.
+* **Object Tracking:** Uses Computer Vision to follow sound sources across the screen.
+* **Automated Panning:** Real-time calculation of stereo positioning based on $X$-axis coordinates.
+* **Immersive Output:** Optimized for headphone users to provide a spatialized listening experience.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+Ensure you have **Python 3.8+** and **FFmpeg** installed on your system.
+
+### Installation
+We provide a script to handle all necessary dependencies (OpenCV, Pydub, NumPy, etc.) automatically.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/houslast/Audioseparatorstereo.git](https://github.com/houslast/Audioseparatorstereo.git)
+    cd Audioseparatorstereo
+    ```
+
+2.  **Install Dependencies:**
+    Run the following command to set up your environment:
+    ```bash
+    python install_deps.py
+    ```
+
+---
+
+## 🛠 Usage
+
+### Starting the Server
+The project includes a web-based interface and API backend to process your videos. To launch it, run:
+
+```bash
+python run_server.py
