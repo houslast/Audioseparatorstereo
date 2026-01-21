@@ -1,0 +1,12 @@
+streamlit>=1.30
+numpy
+deepfilternet
+soundfile
+librosa
+matplotlib
+pyloudnorm
+scipy
+demucs
+opencv-python
+imageio-ffmpeg
+scikit-learn
