@@ -33,7 +33,7 @@ We provide a script to handle all necessary dependencies (OpenCV, Pydub, NumPy, 
 2.  **Install Dependencies:**
     Run the following command to set up your environment:
     ```bash
-    python install_deps.py
+    python install_deps.bat
     ```
 
 ---
@@ -44,4 +44,4 @@ We provide a script to handle all necessary dependencies (OpenCV, Pydub, NumPy, 
 The project includes a web-based interface and API backend to process your videos. To launch it, run:
 
 ```bash
-python run_server.py
+python run_server.bat
